@@ -1,10 +1,11 @@
 
 
 <mat-toolbar color="warn" class="cabecera">
-  <span>GestiCofrade</span>
-      <span class="example-spacer"></span>
-  <ul>
+  <a href="#"><img class="imagenlogo" src="../../../assets/image/Capuchon SImbolo.png" alt=""></a>
+  <a href="#"><span class="logo">GestiCofrade</span></a>
+      <span class="spacer"></span>
 
+  <ul>
   <a routerLink="ListarCofradias"><button mat-raised-button extended color="warn" class="mt-3">
     <mat-icon>archive</mat-icon>
     Todas las Cofradias
@@ -15,5 +16,17 @@
     <mat-icon>add_circle</mat-icon>
     Nueva Cofradia
   </button></a>
+
   </ul>
+  <span class="spacer"></span>
+
+  <ul>
+    <a routerLink="Login"><button mat-raised-button extended class="mt-3">
+
+    Login
+    </button></a>
+</ul>
+<ul>
+    <a routerLink="Logout"><button mat-raised-button extended class="mt-3">Logout</button> </a>
+</ul>
 </mat-toolbar>
