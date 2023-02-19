@@ -1,0 +1,12 @@
+<div class="row row-cols-1 row-cols-md-4 g-4 text-center">
+    <div *ngFor="let Cofradias of cofradias" class="card border-secondary m-3" style="max-width: 18rem;">
+      <div class="card-header">
+        <h2>{{Cofradias.nombre}}</h2>
+      </div>
+      <div class="card-body text-secondary">
+        <p class="card-text">{{Cofradias.informacion}}</p>
+        <p class="card-text">Numero de hermanos: {{Cofradias.numHermanos}}</p>
+      </div>
+    </div>
+
+</div>
