@@ -4,8 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
-import { ListarCofradiasComponent } from './componentes/listar-cofradias/listar-cofradias.component';
-import { CrearCofradiasComponent } from './componentes/crear-cofradias/crear-cofradias.component';
+
 import { PrincipalComponent } from './componentes/principal/principal.component';
 import { PieComponent } from './componentes/pie/pie.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,7 +16,6 @@ const appRoutes: Routes = [
   { path: 'cofradias', component: CofradiasComponent },
   { path: 'cofradias/form', component: FormComponent },
   { path: 'cofradias/form/:id', component: FormComponent },
-  { path: '', redirectTo: '/Listar usuarios', pathMatch: 'full' },
   { path: '**', component: PrincipalComponent },
 ];
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -40,8 +38,6 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     CabeceraComponent,
-    ListarCofradiasComponent,
-    CrearCofradiasComponent,
     PrincipalComponent,
     PieComponent,
     CofradiasComponent,
@@ -65,6 +61,7 @@ import { FormsModule } from '@angular/forms';
     MatListModule,
     MatButtonModule,
     MatExpansionModule,
+
   ],
   providers: [CofradiasService],
   bootstrap: [AppComponent],
