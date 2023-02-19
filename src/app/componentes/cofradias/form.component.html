@@ -1,0 +1,51 @@
+<div class="card">
+  <div class="card-header">
+    <h2></h2>
+  </div>
+  <div class="card-body text-secondary">
+
+    <form action="">
+      <div class="form-group row mb-2">
+        <label for="nombre" class="col-form-label col-sm-2 ">Nombre</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="cofradias.nombre" name="nombre">
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label for="informacion" class="col-form-label col-sm-2">Informacion</label>
+        <div class="col-sm-6">
+          <textarea name="informacion" rows="10" cols="70" [(ngModel)]="cofradias.informacion"></textarea>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label for="numHermanos" class="col-form-label col-sm-2">Numero de Hermanos</label>
+        <div class="col-sm-6">
+          <input type="number" class="form-control" [(ngModel)]="cofradias.numHermanos" name="numHermanos">
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label for="escudo" class="col-form-label col-sm-2">Escudo</label>
+        <div class="col-sm-6">
+          <input type="image" class="form-control" [(ngModel)]="cofradias.escudo" name="escudo">
+        </div>
+      </div>
+
+      <div form-group row>
+        <div class="col-sm-6 mb-2">
+
+          <button class="btn btn-primary" role="button" (click)="create()" *ngIf="!cofradias.id else elseBlock">Crear</button>
+
+        <ng-template #elseBlock>
+          <button class="btn btn-primary" role="button" (click)="update()">Editar</button>
+
+        </ng-template>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+</div>

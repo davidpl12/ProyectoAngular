@@ -16,4 +16,12 @@ export class CofradiasComponent implements OnInit {
     cofradias => this.cofradias = cofradias
    );
   }
+
+  delete(cofradias: Cofradias):void {
+    this.cofradiasService.delete(cofradias.id).subscribe(
+      response => {
+        this.cofradias = this.cofradias.filter(cof => cof!==cofradias)
+      }
+    )
+  }
 }

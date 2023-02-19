@@ -15,7 +15,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 const appRoutes: Routes = [
   { path: 'cofradias', component: CofradiasComponent },
-  { path: 'Crear cofradias', component: CrearCofradiasComponent },
+  { path: 'cofradias/form', component: FormComponent },
+  { path: 'cofradias/form/:id', component: FormComponent },
   { path: '', redirectTo: '/Listar usuarios', pathMatch: 'full' },
   { path: '**', component: PrincipalComponent },
 ];
@@ -27,8 +28,11 @@ import {MatButtonModule} from "@angular/material/button";
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
+
 import { CofradiasComponent } from './componentes/cofradias/cofradias.component';
 import { CofradiasService } from './componentes/cofradias/cofradias.service';
+import { FormComponent } from './componentes/cofradias/form.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -41,6 +45,7 @@ import { CofradiasService } from './componentes/cofradias/cofradias.service';
     PrincipalComponent,
     PieComponent,
     CofradiasComponent,
+    FormComponent,
 
 
   ],
@@ -49,6 +54,7 @@ import { CofradiasService } from './componentes/cofradias/cofradias.service';
     HttpClientModule,
     AppRoutingModule,
     RouterModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes),
     MatToolbarModule,
     MatSlideToggleModule,

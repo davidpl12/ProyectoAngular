@@ -4,4 +4,5 @@ export class Cofradias {
   informacion : string | undefined;
   numHermanos: number | undefined;
   escudo : any;
+
 }

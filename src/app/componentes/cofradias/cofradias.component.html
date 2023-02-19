@@ -6,6 +6,18 @@
       <div class="card-body text-secondary">
         <p class="card-text">{{Cofradias.informacion}}</p>
         <p class="card-text">Numero de hermanos: {{Cofradias.numHermanos}}</p>
+
+      </div>
+      <div class="card-footer">
+
+          <button name="editar" [routerLink]="['/cofradias/form', Cofradias.id]" mat-raised-button extended color="primary" class="m-2">
+            <mat-icon>create</mat-icon>
+            Editar
+          </button>
+          <button name="eliminar" (click)="delete(Cofradias)" mat-raised-button extended color="warn">
+            <mat-icon>clear</mat-icon>Borrar</button>
+
+
       </div>
     </div>
 
