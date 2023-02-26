@@ -13,7 +13,8 @@ export class CofradiasComponent implements OnInit {
   constructor(private cofradiasService: CofradiasService) { }
   ngOnInit() {
    this.cofradiasService.getCofradias().subscribe(
-    cofradias => this.cofradias = cofradias
+    cofradias => {this.cofradias = cofradias;
+    console.log(this.cofradias)}
    );
   }
 

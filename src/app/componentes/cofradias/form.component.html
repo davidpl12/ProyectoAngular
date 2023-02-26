@@ -36,7 +36,7 @@
 
         <div form-group row>
           <div class="col-sm-6 mb-2">
-
+            {{cofradias.id}}
             <button class="btn btn-primary" role="button" (click)="create()" *ngIf="!cofradias.id else elseBlock">Crear</button>
 
           <ng-template #elseBlock>

@@ -10,13 +10,15 @@
 
       </div>
       <div class="card-footer">
+        <p>ID:{{Cofradias.id}}</p>
 
-          <button name="editar" [routerLink]="['/cofradias/form', Cofradias.id]" mat-raised-button extended color="primary" class="m-2">
-            <mat-icon>create</mat-icon>
-            Editar
-          </button>
-          <button name="eliminar" (click)="delete(Cofradias)" mat-raised-button extended color="warn">
-            <mat-icon>clear</mat-icon>Borrar</button>
+        <button name="editar" [routerLink]="['/cofradias/form/', Cofradias.id]" mat-raised-button extended
+          color="primary" class="m-2">
+          <mat-icon>create</mat-icon>
+          Editar
+        </button>
+        <button name="eliminar" (click)="delete(Cofradias)" mat-raised-button extended color="warn">
+          <mat-icon>clear</mat-icon>Borrar</button>
 
 
       </div>

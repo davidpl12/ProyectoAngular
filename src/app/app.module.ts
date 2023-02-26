@@ -16,6 +16,8 @@ const appRoutes: Routes = [
   { path: 'cofradias', component: CofradiasComponent },
   { path: 'cofradias/form', component: FormComponent },
   { path: 'cofradias/form/:id', component: FormComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'registro', component: RegisterComponent },
   { path: '**', component: PrincipalComponent },
 ];
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -31,6 +33,8 @@ import { CofradiasComponent } from './componentes/cofradias/cofradias.component'
 import { CofradiasService } from './componentes/cofradias/cofradias.service';
 import { FormComponent } from './componentes/cofradias/form.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -42,6 +46,8 @@ import { FormsModule } from '@angular/forms';
     PieComponent,
     CofradiasComponent,
     FormComponent,
+    LoginComponent,
+    RegisterComponent,
 
 
   ],

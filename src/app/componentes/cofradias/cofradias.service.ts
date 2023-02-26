@@ -28,11 +28,11 @@ export class CofradiasService {
 
    getCofradia(id: number): Observable<Cofradias> {
     // return of(COFRADIAS);
-    return this.http.get<Cofradias>(`${this.urlEndPoint}/${id}`)
+    return this.http.get<Cofradias>(`${this.urlEndPoint}Uno?id=${id}`)
    }
 
-   update(cofradias:Cofradias): Observable<Cofradias>{
-    return this.http.put<Cofradias>(`${this.urlEndPoint}/${cofradias.id}`, Cofradias,{headers:this.httpHeaders} )
+   update(cofradias: Cofradias): Observable<Cofradias>{
+    return this.http.put<Cofradias>(`${this.urlEndPoint}/${cofradias.id}`, cofradias,{headers:this.httpHeaders} )
   }
 
   delete(id: any): Observable<Cofradias>{
