@@ -7,7 +7,7 @@ import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 
 import { PrincipalComponent } from './componentes/principal/principal.component';
 import { PieComponent } from './componentes/pie/pie.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { RouterModule, Routes } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -77,7 +77,13 @@ import { BoardUserComponent } from './board-user/board-user.component';
     MatExpansionModule,
 
   ],
-  providers: [CofradiasService],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: CofradiasService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

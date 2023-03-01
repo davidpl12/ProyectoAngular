@@ -1,5 +1,5 @@
 <div class="container mt-3">
-  <div class="row row-cols-1 row-cols-md-4 g-4 text-center">
+  <div class="row row-cols-1 row-cols-md-4 g-4 text-center" style=" display: flex; justify-content: center;">
     <div *ngFor="let Cofradias of cofradias" class="card border-secondary m-3" style="max-width: 18rem;">
       <div class="card-header">
         <h2>{{Cofradias.nombre}}</h2>
@@ -9,8 +9,7 @@
         <p class="card-text">Numero de hermanos: {{Cofradias.numHermanos}}</p>
 
       </div>
-      <div class="card-footer">
-        <p>ID:{{Cofradias.id}}</p>
+      <div *ngIf="showAdminBoard" class="card-footer">
 
         <button name="editar" [routerLink]="['/cofradias/form/', Cofradias.id]" mat-raised-button extended
           color="primary" class="m-2">

@@ -1,21 +1,19 @@
-<div class="container" >
+<div class="container mt-3" >
   <header class="jumbotron">
-    <h3>
-      <strong>{{ currentUser.username }}</strong> Profile
-    </h3>
-  </header>
-  <p>
-    <strong>Email:</strong>
-    {{ currentUser.email }}
-  </p>
-  <strong>Roles:</strong>
-  <ul>
-    <li >
-      {{currentUser.role }}
-    </li>
-  </ul>
-</div>
 
-<ng-template #loggedOut>
-  Please login.
-</ng-template>
+    <div class="row" style=" display: flex; align-items: center; justify-content: center;">
+      <div class="card border-danger mb-3" style="max-width: 18rem; font-size: large; text-align: center;">
+        <div class="card-header"><strong>{{ currentUser.username }}</strong> Profile</div>
+        <div class="card-body text-danger">
+          <p class="card-text"><strong>Email:</strong>
+            {{ currentUser.email }}</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <ng-template #loggedOut>
+      Please login.
+    </ng-template>

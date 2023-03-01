@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from '../../_services/storage.service';
+import { Hermano } from './hermano';
 
 @Component({
   selector: 'app-profile',
@@ -8,6 +9,7 @@ import { StorageService } from '../../_services/storage.service';
 })
 export class ProfileComponent implements OnInit {
   currentUser: any;
+  public hermano: Hermano = new Hermano;
 
   constructor(private storageService: StorageService) { }
 
